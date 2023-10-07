@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+public enum NavigationTransitionStyle {
+    case push
+    case presentModally
+    case presentFullscreen
+}
