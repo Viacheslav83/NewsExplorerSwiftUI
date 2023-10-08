@@ -9,17 +9,16 @@ import SwiftUI
 
 enum MapRouter: NavigationRouterProtocol {
     case onboarding
-    case main
+    case news
     case description
+    case userName
     
     var transition: NavigationTransitionStyle {
         switch self {
-        case .onboarding:
-            return .push
-        case .main:
+        case .onboarding, .news, .userName:
             return .push
         case .description:
-            return .push
+            return .presentModally
         }
     }
     
@@ -28,10 +27,12 @@ enum MapRouter: NavigationRouterProtocol {
         switch self {
         case .onboarding:
             OnboardingView()
-        case .main:
+        case .news:
             NewsView()
         case .description:
             DescriptionNewsView()
+        case .userName:
+            UserNameView()
         }
     }
 }

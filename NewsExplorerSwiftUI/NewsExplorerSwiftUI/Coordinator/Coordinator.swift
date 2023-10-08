@@ -9,23 +9,23 @@ import SwiftUI
 
 class Coordinator<Router: NavigationRouterProtocol>: ObservableObject {
     
-     let navigationController: UINavigationController
-     let startingRoute: Router?
+    private let navigationController: UINavigationController
+    private let startingRoute: Router?
     
-     init(
+    init(
         navigationController: UINavigationController = .init(),
         startingRoute: Router? = nil
-     ) {
+    ) {
         self.navigationController = navigationController
         self.startingRoute = startingRoute
     }
     
-     func start() {
+    func start() {
         guard let route = startingRoute else { return }
         show(route)
     }
     
-     func show(_ route: Router, animated: Bool = true) {
+    func show(_ route: Router, animated: Bool = true) {
         let view = route.view()
         let viewWithCoordinator = view.environmentObject(self)
         let viewController = UIHostingController(rootView: viewWithCoordinator)
@@ -42,15 +42,15 @@ class Coordinator<Router: NavigationRouterProtocol>: ObservableObject {
         }
     }
     
-     func pop(animated: Bool = true) {
+    func pop(animated: Bool = true) {
         navigationController.popViewController(animated: animated)
     }
     
-     func popToRoot(animated: Bool = true) {
+    func popToRoot(animated: Bool = true) {
         navigationController.popToRootViewController(animated: animated)
     }
     
-     func dismiss(animated: Bool = true) {
+    func dismiss(animated: Bool = true) {
         navigationController.dismiss(animated: true) { [weak self] in
             /// because there is a leak in UIHostingControllers that prevents from deallocation
             self?.navigationController.viewControllers = []
@@ -59,5 +59,9 @@ class Coordinator<Router: NavigationRouterProtocol>: ObservableObject {
     
     func hideAndShowNavController(isHidden: Bool = false) {
         navigationController.navigationBar.isHidden = isHidden
+    }
+    
+    func getNavigationController() -> UINavigationController {
+        return navigationController
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@main
+//@main
 struct NewsExplorerSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
