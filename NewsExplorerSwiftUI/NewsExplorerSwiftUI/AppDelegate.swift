@@ -37,8 +37,9 @@ extension AppDelegate {
         @AppStorage(UserDefaultsKeys.isShowOnboarding) var isShowOnboarding: Bool?
         @AppStorage(UserDefaultsKeys.userName) var userName: String?
 //        isShowOnboarding = false
+//        userName = nil
         if userName != nil {
-            return MapRouter.news
+            return MapRouter.tabBar
         } else
         if let isShowOnboarding = isShowOnboarding, isShowOnboarding == true {
             return MapRouter.userName
