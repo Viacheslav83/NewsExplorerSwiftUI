@@ -11,6 +11,7 @@ enum ButtonType {
     case next
     case skip
     case finish
+    case logout
     
     public var title: String {
         switch self {
@@ -20,19 +21,21 @@ enum ButtonType {
             return "Skip"
         case .finish:
             return "Finish"
+        case .logout:
+            return "Logout"
         }
     }
     
     public var cornerRadius: CGFloat {
         switch self {
-        case .next, .skip, .finish:
+        case .next, .skip, .finish, .logout:
             return 8
         }
     }
     
     public var buttonHeight: CGFloat {
         switch self {
-        case .next, .skip, .finish:
+        case .next, .skip, .finish, .logout:
             return 56
         }
     }
@@ -41,13 +44,9 @@ enum ButtonType {
         switch self {
         case .skip, .finish:
             return Color(ColorType.customBlueColor.rawValue)
-        case .next:
+        case .next, .logout:
             return nil
         }
-    }
-    
-    public var buttonTapped: ButtonType {
-        return self
     }
     
     public var backgroundColor: Color {
@@ -56,6 +55,8 @@ enum ButtonType {
             return Color(ColorType.customBlueColor.rawValue)
         case .skip, .finish:
             return Color(ColorType.baseColor.rawValue)
+        case .logout:
+            return Color(ColorType.customRedColor.rawValue)
         }
     }
 }

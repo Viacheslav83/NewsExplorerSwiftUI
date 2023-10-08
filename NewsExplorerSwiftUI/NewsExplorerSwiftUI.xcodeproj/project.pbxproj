@@ -150,11 +150,10 @@
 			isa = PBXGroup;
 			children = (
 				0DB50D6C2AD285FB00E9A151 /* Onboarding */,
-				0DB50D562AD1ECBE00E9A151 /* NewsView.swift */,
-				0DB50D582AD1ECD800E9A151 /* DescriptionNewsView.swift */,
+				0DB50D8F2AD30AAC00E9A151 /* News */,
 				0DB50D862AD2FE3300E9A151 /* UserName */,
-				0DB50D872AD301B300E9A151 /* TabBarView.swift */,
-				0DB50D892AD301CF00E9A151 /* ProfileView.swift */,
+				0DB50D8E2AD30A9D00E9A151 /* TabBar */,
+				0DB50D8D2AD30A9200E9A151 /* Profile */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -224,6 +223,31 @@
 				0DB50D802AD2ECD500E9A151 /* UserNameView.swift */,
 			);
 			path = UserName;
+			sourceTree = "<group>";
+		};
+		0DB50D8D2AD30A9200E9A151 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0DB50D892AD301CF00E9A151 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		0DB50D8E2AD30A9D00E9A151 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0DB50D872AD301B300E9A151 /* TabBarView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		0DB50D8F2AD30AAC00E9A151 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				0DB50D562AD1ECBE00E9A151 /* NewsView.swift */,
+				0DB50D582AD1ECD800E9A151 /* DescriptionNewsView.swift */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
