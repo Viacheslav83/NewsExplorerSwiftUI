@@ -20,14 +20,15 @@ struct OnboardingItemView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: AppConstats.screenWidth * 0.7, height: AppConstats.screenWidth * 0.7)
-                    .cornerRadius(24)
                     .padding(.horizontal, AppConstats.leadingSpacing)
+                    .cornerRadius(24)
                 
                 VStack {
                     Text(model.title)
                         .font(.title)
                         .fontWeight(.bold)
                         .lineLimit(2)
+                        .multilineTextAlignment(.center)
                         .padding(.bottom, 16)
                 }
                 

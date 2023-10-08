@@ -10,11 +10,11 @@ import SwiftUI
 struct ButtonView: View {
     //MARK: - Properties
     var buttonType: ButtonType
-    var didTapButton: ((_ type: ButtonType) -> ())?
+    var didTapButton: (() -> ())?
     
     var body: some View {
             Button(action: {
-                didTapButton?(buttonType.buttonTapped)
+                didTapButton?()
             }, label: {
                 Text(buttonType.title)
                     .modifier(ButtonTextModifier())

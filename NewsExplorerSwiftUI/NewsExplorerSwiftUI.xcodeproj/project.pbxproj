@@ -145,7 +145,7 @@
 				0DB50D6C2AD285FB00E9A151 /* Onboarding */,
 				0DB50D562AD1ECBE00E9A151 /* NewsView.swift */,
 				0DB50D582AD1ECD800E9A151 /* DescriptionNewsView.swift */,
-				0DB50D802AD2ECD500E9A151 /* UserNameView.swift */,
+				0DB50D862AD2FE3300E9A151 /* UserName */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -207,6 +207,14 @@
 				0DB50D842AD2F11400E9A151 /* View+Extension.swift */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		0DB50D862AD2FE3300E9A151 /* UserName */ = {
+			isa = PBXGroup;
+			children = (
+				0DB50D802AD2ECD500E9A151 /* UserNameView.swift */,
+			);
+			path = UserName;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
