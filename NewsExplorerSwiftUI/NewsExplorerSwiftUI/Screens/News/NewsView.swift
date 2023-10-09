@@ -89,7 +89,7 @@ private extension NewsView {
     func itemTapped() {
         if let selectedModel = selectedModel {
             coordinator.show(.description(model: selectedModel))
-            self.selectedModel = nil
+//            self.selectedModel = nil
         }
     }
 }
