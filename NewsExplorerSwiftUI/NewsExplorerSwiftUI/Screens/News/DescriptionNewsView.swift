@@ -10,11 +10,13 @@ import SwiftUI
 struct DescriptionNewsView: View {
     @EnvironmentObject var coordinator: Coordinator<MapRouter>
     
+    let model: ArticleModel
+    
     var body: some View {
         Text("DescriptionNewsView")
     }
 }
 
 #Preview {
-    DescriptionNewsView()
+    DescriptionNewsView(model: ArticleModel.mockModel)
 }

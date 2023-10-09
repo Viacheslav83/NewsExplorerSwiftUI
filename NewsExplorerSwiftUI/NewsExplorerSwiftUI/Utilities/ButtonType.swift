@@ -12,6 +12,7 @@ enum ButtonType {
     case skip
     case finish
     case logout
+    case custom(text: String)
     
     public var title: String {
         switch self {
@@ -23,19 +24,21 @@ enum ButtonType {
             return "Finish"
         case .logout:
             return "Logout"
+        case .custom(text: let text):
+            return text
         }
     }
     
     public var cornerRadius: CGFloat {
         switch self {
-        case .next, .skip, .finish, .logout:
+        case .next, .skip, .finish, .logout, .custom:
             return 8
         }
     }
     
     public var buttonHeight: CGFloat {
         switch self {
-        case .next, .skip, .finish, .logout:
+        case .next, .skip, .finish, .logout, .custom:
             return 56
         }
     }
@@ -44,7 +47,7 @@ enum ButtonType {
         switch self {
         case .skip, .finish:
             return Color(ColorType.customBlueColor.rawValue)
-        case .next, .logout:
+        case .next, .logout, .custom:
             return nil
         }
     }
@@ -53,7 +56,7 @@ enum ButtonType {
         switch self {
         case .next:
             return Color(ColorType.customBlueColor.rawValue)
-        case .skip, .finish:
+        case .skip, .finish, .custom:
             return Color(ColorType.baseColor.rawValue)
         case .logout:
             return Color(ColorType.customRedColor.rawValue)

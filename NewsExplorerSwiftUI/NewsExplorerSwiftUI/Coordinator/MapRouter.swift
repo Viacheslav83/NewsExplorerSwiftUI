@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum MapRouter: NavigationRouterProtocol {
-    case description
+    case description(model: ArticleModel)
     case onboarding
     case news
     case userName
@@ -30,8 +30,8 @@ enum MapRouter: NavigationRouterProtocol {
             OnboardingView()
 //        case .news:
 //            NewsView()
-        case .description:
-            DescriptionNewsView()
+        case .description(model: let model):
+            DescriptionNewsView(model: model)
         case .userName:
             UserNameView()
         case .tabBar:
